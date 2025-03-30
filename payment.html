@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - EcoCollect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                <h1>EcoCollect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Book Pickup</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button id="logoutBtn" class="btn btn-outline">Log Out</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Book Pickup</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="auth-mobile"><button id="logoutBtnMobile">Log Out</button></li>
+        </ul>
+    </div>
+
+    <!-- Payment Form Section -->
+    <section class="payment-form-section">
+        <div class="container">
+            <div class="booking-form-container">
+                <div class="booking-form-header">
+                    <h2>Payment</h2>
+                    <p>Complete your payment to confirm the waste collection booking.</p>
+                </div>
+                
+                <!-- Booking Steps -->
+                <div class="booking-steps">
+                    <div class="booking-step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Booking Details</div>
+                    </div>
+                    <div class="booking-step active">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                </div>
+                
+                <!-- Booking Summary -->
+                <div class="payment-summary">
+                    <h3 style="margin-bottom: 15px;">Booking Summary</h3>
+                    <div class="payment-item">
+                        <span>Service Type:</span>
+                        <span>Regular Waste</span>
+                    </div>
+                    <div class="payment-item">
+                        <span>Waste Amount:</span>
+                        <span>Medium (3-5 bags)</span>
+                    </div>
+                    <div class="payment-item">
+                        <span>Pickup Date & Time:</span>
+                        <span>30 Mar 2025, 10:00 AM</span>
+                    </div>
+                    <div class="payment-item">
+                        <span>Address:</span>
+                        <span>123 Example Street, City, State, 12345</span>
+                    </div>
+                    <div class="payment-item payment-total">
+                        <span>Total Amount:</span>
+                        <span>₹30.00</span>
+                    </div>
+                </div>
+                
+                <form id="paymentForm">
+                    <!-- Payment Methods -->
+                    <div class="payment-methods-selection">
+                        <label>Select Payment Method</label>
+                        <div class="payment-method selected">
+                            <input type="radio" name="paymentMethod" id="card" value="card" checked>
+                            <div class="payment-method-info">
+                                <div class="payment-method-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div>
+                                    <span>Credit/Debit Card</span>
+                                    <div style="font-size: 0.9rem; color: #6c757d;">
+                                        <i class="fab fa-cc-visa"></i>
+                                        <i class="fab fa-cc-mastercard"></i>
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" name="paymentMethod" id="upi" value="upi">
+                            <div class="payment-method-info">
+                                <div class="payment-method-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div>
+                                    <span>UPI</span>
+                                    <div style="font-size: 0.9rem; color: #6c757d;">
+                                        Google Pay, PhonePe, Paytm
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" name="paymentMethod" id="cash" value="cash">
+                            <div class="payment-method-info">
+                                <div class="payment-method-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <div>
+                                    <span>Cash on Delivery</span>
+                                    <div style="font-size: 0.9rem; color: #6c757d;">
+                                        Pay at the time of collection
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Payment Form (initially visible) -->
+                    <div id="cardPaymentForm">
+                        <div class="booking-form-grid">
+                            <div class="form-group">
+                                <label for="cardName">Name on Card</label>
+                                <input type="text" id="cardName" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="expDate">Expiry Date</label>
+                                <input type="text" id="expDate" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox-group" style="margin-top: 20px;">
+                            <input type="checkbox" id="saveCard">
+                            <label for="saveCard">Save card for future payments</label>
+                        </div>
+                    </div>
+                    
+                    <!-- UPI Payment Form (initially hidden) -->
+                    <div id="upiPaymentForm" style="display: none;">
+                        <div class="form-group">
+                            <label for="upiId">UPI ID</label>
+                            <input type="text" id="upiId" placeholder="yourname@upi" required>
+                            <small>Enter your UPI ID (e.g. name@okicici, yourname@ybl)</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Cash on Delivery (no form needed, initially hidden) -->
+                    <div id="cashPaymentForm" style="display: none; background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                        <p style="margin-bottom: 0; text-align: center;">Please keep the exact amount ready at the time of waste collection.</p>
+                    </div>
+                    
+                    <div class="payment-secure-badge">
+                        <i class="fas fa-lock"></i>
+                        <p>Your payment information is encrypted and secure. We never store your full card details.</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full" style="margin-top: 20px;">Pay ₹30.00</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Payment Successful!</h3>
+            <p id="modalMessage">Your payment has been processed and your booking is confirmed.</p>
+            <button class="btn btn-primary modal-btn">View Your Bookings</button>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- To Top Button -->
+    <button id="toTopBtn" class="to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Logout functionality
+            function handleLogout() {
+                window.location.href = 'index.html';
+            }
+            
+            document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+            document.getElementById('logoutBtnMobile').addEventListener('click', handleLogout);
+            
+            // Payment method selection
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            const cardForm = document.getElementById('cardPaymentForm');
+            const upiForm = document.getElementById('upiPaymentForm');
+            const cashForm = document.getElementById('cashPaymentForm');
+            const payButton = document.querySelector('#paymentForm button[type="submit"]');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    // Clear all selected states
+                    paymentMethods.forEach(m => m.classList.remove('selected'));
+                    
+                    // Add selected state to clicked method
+                    this.classList.add('selected');
+                    
+                    // Check the radio button
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                    
+                    // Show/hide appropriate form
+                    if (radio.value === 'card') {
+                        cardForm.style.display = 'block';
+                        upiForm.style.display = 'none';
+                        cashForm.style.display = 'none';
+                        payButton.textContent = 'Pay ₹30.00';
+                    } else if (radio.value === 'upi') {
+                        cardForm.style.display = 'none';
+                        upiForm.style.display = 'block';
+                        cashForm.style.display = 'none';
+                        payButton.textContent = 'Pay ₹30.00';
+                    } else if (radio.value === 'cash') {
+                        cardForm.style.display = 'none';
+                        upiForm.style.display = 'none';
+                        cashForm.style.display = 'block';
+                        payButton.textContent = 'Confirm Booking';
+                    }
+                });
+            });
+            
+            // Card formatting
+            const cardNumber = document.getElementById('cardNumber');
+            cardNumber.addEventListener('input', function(e) {
+                // Remove any non-digit characters
+                let value = this.value.replace(/\D/g, '');
+                
+                // Add spaces after every 4 digits
+                value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+                
+                // Update input value
+                this.value = value;
+            });
+            
+            const expDate = document.getElementById('expDate');
+            expDate.addEventListener('input', function(e) {
+                // Remove any non-digit characters
+                let value = this.value.replace(/\D/g, '');
+                
+                // Add / after the first 2 digits (MM/YY format)
+                if (value.length > 2) {
+                    value = value.substring(0, 2) + '/' + value.substring(2);
+                }
+                
+                // Update input value
+                this.value = value;
+            });
+            
+            // Form submission
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const selectedMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+                
+                // Validate form based on selected payment method
+                let isValid = true;
+                
+                if (selectedMethod === 'card') {
+                    // Basic card validation
+                    const cardNum = cardNumber.value.replace(/\s/g, '');
+                    if (cardNum.length < 16) {
+                        isValid = false;
+                        alert('Please enter a valid card number.');
+                    }
+                    
+                    const cvv = document.getElementById('cvv').value;
+                    if (cvv.length < 3) {
+                        isValid = false;
+                        alert('Please enter a valid CVV.');
+                    }
+                    
+                    const expiration = expDate.value;
+                    if (!expiration.match(/^\d{2}\/\d{2}$/)) {
+                        isValid = false;
+                        alert('Please enter a valid expiration date (MM/YY).');
+                    }
+                } else if (selectedMethod === 'upi') {
+                    // Basic UPI validation
+                    const upiId = document.getElementById('upiId').value;
+                    if (!upiId.includes('@')) {
+                        isValid = false;
+                        alert('Please enter a valid UPI ID.');
+                    }
+                }
+                
+                // Process payment if valid
+                if (isValid) {
+                    // Simulate payment processing
+                    setTimeout(function() {
+                        // Show success modal
+                        const modal = document.getElementById('successModal');
+                        if (modal) {
+                            if (selectedMethod === 'cash') {
+                                document.getElementById('modalTitle').textContent = 'Booking Confirmed!';
+                                document.getElementById('modalMessage').textContent = 'Your booking has been confirmed. Please keep the exact amount ready at the time of collection.';
+                            }
+                            modal.classList.add('show');
+                            
+                            // Add event listener to redirect after closing
+                            document.querySelector('.modal-btn').addEventListener('click', function() {
+                                window.location.href = 'dashboard.html';
+                            });
+                        }
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
