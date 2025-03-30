@@ -1,6 +1,6 @@
 
 
-**♻️ WasteEase - On-Demand Waste Collection** 
+**♻️ EcoCollect - On-Demand Waste Collection** 
 
 **🚛 A simple web-based waste collection service to help users schedule waste pickups quickly and efficiently.**  
 
