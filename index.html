@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCollect - On-Demand Waste Collection</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                <h1>EcoCollect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Log In</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="auth-mobile"><a href="login.html">Log In</a></li>
+            <li class="auth-mobile"><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Garbage Gone in 30 Minutes!</h1>
+                <h2>On-Demand Waste Pickup at Your Doorstep</h2>
+                <p>EcoCollect helps you schedule waste collection, track recycling efforts, and reduce your environmental footprint with ease.</p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn btn-primary btn-large">Book a Waste Pickup</a>
+                    <a href="#how-it-works" class="btn btn-outline btn-large">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" alt="Waste collection service">
+                <div class="eco-badge">
+                    <p class="badge-title">100% Eco-friendly</p>
+                    <p class="badge-subtitle">All waste properly sorted & recycled</p>
+                </div>
+            </div>
+        </div>
+        <div class="wave-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#f8f9fa" fill-opacity="1" d="M0,160L48,154.7C96,149,192,139,288,154.7C384,171,480,213,576,224C672,235,768,213,864,181.3C960,149,1056,107,1152,101.3C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>87%</h3>
+                    <p>Waste Properly Recycled</p>
+                </div>
+                <div class="stat-card">
+                    <h3>12K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-card">
+                    <h3>45K</h3>
+                    <p>Tons CO₂ Saved</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Smart Waste Management Features</h2>
+                <p>Everything you need to manage waste collection efficiently and contribute to a cleaner environment.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Easy Scheduling</h3>
+                    <p>Schedule waste collection with just a few clicks. Choose your preferred date and time slot.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Real-time Tracking</h3>
+                    <p>Track your waste collection in real-time. Know exactly when our team will arrive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Recycling Analytics</h3>
+                    <p>Get detailed reports on your recycling habits and environmental impact.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Flexible Payment</h3>
+                    <p>Pay only for what you need with flexible payment options and transparent pricing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Reminders</h3>
+                    <p>Never miss a collection with automated reminders via email or push notifications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Environmental Impact</h3>
+                    <p>See your personal contribution to reducing carbon footprint and saving resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How EcoCollect Works</h2>
+                <p>Our simple process makes waste management effortless and efficient.</p>
+            </div>
+            <div class="steps-container">
+                <div class="steps-line"></div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Sign Up</h3>
+                        <p>Create your account in minutes. No paperwork needed.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Schedule Pickup</h3>
+                        <p>Select your preferred time and location for waste collection.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>We Collect</h3>
+                        <p>Our eco-friendly trucks arrive on time to collect your waste.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Track Impact</h3>
+                        <p>See your environmental contribution through your dashboard.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="process-details">
+                <div class="process-image">
+                    <img src="https://images.unsplash.com/photo-1620485827003-70ff3256bddc?auto=format&fit=crop&w=800&q=80" alt="Garbage truck collecting waste">
+                </div>
+                <div class="process-content">
+                    <h3>Efficient Collection Process</h3>
+                    <p>Our state-of-the-art trucks and trained professionals ensure that waste is collected, sorted, and processed properly to maximize recycling and minimize environmental impact.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Specialized vehicles for different waste types</li>
+                        <li><i class="fas fa-check-circle"></i> Route optimization to reduce carbon emissions</li>
+                        <li><i class="fas fa-check-circle"></i> Professional sorting to maximize recycling potential</li>
+                        <li><i class="fas fa-check-circle"></i> Transparent tracking of waste from collection to processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact">
+        <div class="container">
+            <div class="impact-content">
+                <h2>Making a Real Environmental Impact</h2>
+                <p>When you choose EcoCollect, you're not just managing waste—you're joining a movement to create a cleaner, more sustainable future.</p>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <h3>15,000+</h3>
+                        <p>Tons of waste recycled</p>
+                    </div>
+                    <div class="impact-stat">
+                        <h3>45K</h3>
+                        <p>Tons CO₂ emissions saved</p>
+                    </div>
+                    <div class="impact-stat">
+                        <h3>8,500</h3>
+                        <p>Trees planted</p>
+                    </div>
+                    <div class="impact-stat">
+                        <h3>85%</h3>
+                        <p>Waste diverted from landfills</p>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-image">
+                <img src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=800&q=80" alt="Recycling facility">
+                <div class="eco-badge eco-badge-alt">
+                    <div class="badge-content">
+                        <i class="fas fa-leaf"></i>
+                        <div>
+                            <p class="badge-title">Eco-certified</p>
+                            <p class="badge-subtitle">ISO 14001 Compliant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your waste management needs.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">₹20<span>/pickup</span></div>
+                    <p class="description">Basic one-time waste collection service.</p>
+                    <ul class="pricing-features">
+                        <li class="included"><i class="fas fa-check"></i> One-time collection</li>
+                        <li class="included"><i class="fas fa-check"></i> Basic waste sorting</li>
+                        <li class="included"><i class="fas fa-check"></i> Online scheduling</li>
+                        <li class="included"><i class="fas fa-check"></i> Standard bins included</li>
+                        <li class="not-included"><i class="fas fa-times"></i> Special waste handling</li>
+                        <li class="not-included"><i class="fas fa-times"></i> Environmental impact reports</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline btn-full">Join Waitlist</a>
+                </div>
+                <div class="pricing-card pricing-popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Standard</h3>
+                    <div class="price">₹40<span>/pickup</span></div>
+                    <p class="description">One-time collection for 1 large garbage bag.</p>
+                    <ul class="pricing-features">
+                        <li class="included"><i class="fas fa-check"></i> One large bag collection</li>
+                        <li class="included"><i class="fas fa-check"></i> Advanced recycling sorting</li>
+                        <li class="included"><i class="fas fa-check"></i> Priority scheduling</li>
+                        <li class="included"><i class="fas fa-check"></i> Premium bins included</li>
+                        <li class="included"><i class="fas fa-check"></i> Special waste handling</li>
+                        <li class="not-included"><i class="fas fa-times"></i> Environmental impact reports</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-primary btn-full">Join Waitlist</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">₹50<span>/pickup</span></div>
+                    <p class="description">3 times a week collection & cleaning.</p>
+                    <ul class="pricing-features">
+                        <li class="included"><i class="fas fa-check"></i> Tri-weekly collection</li>
+                        <li class="included"><i class="fas fa-check"></i> Complete waste sorting</li>
+                        <li class="included"><i class="fas fa-check"></i> 24/7 priority service</li>
+                        <li class="included"><i class="fas fa-check"></i> Custom bins & containers</li>
+                        <li class="included"><i class="fas fa-check"></i> Hazardous waste handling</li>
+                        <li class="included"><i class="fas fa-check"></i> Detailed environmental reports</li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline btn-full">Join Waitlist</a>
+                </div>
+            </div>
+            <div class="pricing-note">
+                <p>Need a custom plan? We also offer:</p>
+                <div class="custom-plans">
+                    <div class="custom-plan">
+                        <i class="fas fa-glass-cheers"></i>
+                        <p>₹70/- Party/Event waste cleanup + collection</p>
+                    </div>
+                    <div class="custom-plan">
+                        <i class="fas fa-store"></i>
+                        <p>₹400/- Monthly waste pickup for small shops/snack stalls</p>
+                    </div>
+                </div>
+                <a href="#contact" class="btn btn-outline">Contact Us for Custom Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Beta Users Say</h2>
+                <p>Hear from our early adopters who've been testing EcoCollect.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                    <p class="testimonial-content">"EcoCollect has completely changed how we manage waste at our office. Scheduling is a breeze, and the environmental impact reports help us showcase our sustainability efforts to clients."</p>
+                    <div class="testimonial-author">
+                       
+                        <div class="author-info">
+                            <h4>Mr.Gautam Singh</h4>
+                            <p>Office Manager, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.5</span>
+                    </div>
+                    <p class="testimonial-content">"As a restaurant owner, waste management used to be a constant headache. With EcoCollect, I can focus on my business knowing that our waste is being handled responsibly and efficiently."</p>
+                    <div class="testimonial-author">
+                        
+                        <div class="author-info">
+                            <h4>Mr.Viraj Pradhan</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0</span>
+                    </div>
+                    <p class="testimonial-content">"I love being able to track our household's recycling efforts and see the environmental impact we're making. The kids are excited about waste sorting now that they can see the difference it makes!"</p>
+                    <div class="testimonial-author">
+                        
+                        <div class="author-info">
+                            <h4>Miss. Amitha Nambiar</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="waitlist">
+        <div class="container">
+            <div class="waitlist-grid">
+                <div class="waitlist-image">
+                    <img src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=800&q=80" alt="Waste management">
+                </div>
+                <div class="waitlist-form">
+                    <h2>Join Our Waitlist</h2>
+                    <p>Be among the first to experience EcoCollect when we launch. Sign up now to get early access and special offers.</p>
+                    <form id="waitlistForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">Zip Code</label>
+                            <input type="text" id="zipCode" placeholder="12345" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">I am a</label>
+                            <select id="userType" required>
+                                <option value="">Select an option</option>
+                                <option value="homeowner">Homeowner</option>
+                                <option value="business">Business Owner</option>
+                                <option value="property_manager">Property Manager</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">
+                                I agree to receive updates and marketing communications from EcoCollect. I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Join Waitlist</button>
+                    </form>
+                    <p class="form-disclaimer">We respect your privacy and will never share your information with third parties.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Waste Management?</h2>
+            <p>Join EcoCollect today and be part of the waste management revolution. Together, we can make a significant environmental impact.</p>
+            <div class="cta-buttons">
+                <a href="#waitlist" class="btn btn-primary btn-large">Join Waitlist</a>
+                <a href="#contact" class="btn btn-outline btn-large">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions or need more information? We're here to help.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="How can we help you?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Your message here..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>
+                                No.77/A Koramangala Industrial Layout<br>
+                                Koramangala, Bengaluru,Karnataka 560095<br>
+                                India
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 (123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@ecocollect.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>
+                                Monday - Friday: 6am - 5pm<br>
+                                Saturday: 5am - 4am<br>
+                                Sunday: 12am - 11pm 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-recycle"></i>
+                        <h2>EcoCollect</h2>
+                    </div>
+                    <p>Smart waste management solutions for a cleaner, greener future.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Residential Collection</a></li>
+                        <li><a href="#">Commercial Waste</a></li>
+                        <li><a href="#">Recycling Services</a></li>
+                        <li><a href="#">Hazardous Waste</a></li>
+                        <li><a href="#">E-Waste Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Data Protection</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2023</span> EcoCollect. All rights reserved.</p>
+                <div class="payment-methods">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Visa_2014_logo_detail.svg" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/UPI-Logo-vector.svg" alt="UPI">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your message has been sent successfully.</p>
+            <button class="btn btn-primary modal-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- To Top Button -->
+    <button id="toTopBtn" class="to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EcoCollect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                <h1>EcoCollect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline">Log In</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="auth-mobile"><a href="login.html">Log In</a></li>
+            <li class="auth-mobile"><a href="signup.html">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <!-- Login Section -->
+    <section class="auth-page">
+        <div class="auth-container">
+            <div class="auth-form">
+                <h2>Welcome Back</h2>
+                <p>Log in to your account to manage your waste collection services.</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit" class="btn btn-primary btn-full">Login</button>
+                </form>
+                
+                <div class="auth-switcher">
+                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
+            </div>
+            <div class="auth-hero">
+                <h2>Join the Waste Management Revolution</h2>
+                <p>Log in to your EcoCollect account to access:</p>
+                <ul class="auth-benefits">
+                    <li><i class="fas fa-check-circle"></i> Easy scheduling for waste pickups</li>
+                    <li><i class="fas fa-check-circle"></i> Real-time tracking of collection status</li>
+                    <li><i class="fas fa-check-circle"></i> Detailed recycling analytics</li>
+                    <li><i class="fas fa-check-circle"></i> Eco-friendly waste management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">You have successfully logged in.</p>
+            <button class="btn btn-primary modal-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
