@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Pickup - EcoCollect</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+                <h1>EcoCollect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Book Pickup</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button id="logoutBtn" class="btn btn-outline">Log Out</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Book Pickup</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="auth-mobile"><button id="logoutBtnMobile">Log Out</button></li>
+        </ul>
+    </div>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <div class="container">
+            <div class="booking-form-container">
+                <div class="booking-form-header">
+                    <h2>Book a Waste Pickup</h2>
+                    <p>Fill out the form below to schedule your waste collection service.</p>
+                </div>
+                
+                <!-- Booking Steps -->
+                <div class="booking-steps">
+                    <div class="booking-step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Booking Details</div>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                </div>
+                
+                <form id="bookingForm">
+                    <div class="booking-form-grid">
+                        <div class="form-group">
+                            <label for="serviceType">Service Type</label>
+                            <select id="serviceType" required>
+                                <option value="">Select service type</option>
+                                <option value="regular">Regular Waste (₹20)</option>
+                                <option value="recycling">Recycling (₹40)</option>
+                                <option value="special">Special Waste (₹50)</option>
+                                <option value="party">Party/Event Cleanup (₹70)</option>
+                                <option value="shop">Shop/Stall Monthly (₹400)</option>
+                            </select>
+                            <small>Select the type of waste collection service needed</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wasteAmount">Waste Amount</label>
+                            <select id="wasteAmount" required>
+                                <option value="">Select waste amount</option>
+                                <option value="small">Small (1-2 bags)</option>
+                                <option value="medium">Medium (3-5 bags)</option>
+                                <option value="large">Large (6+ bags)</option>
+                            </select>
+                            <small>Estimate the amount of waste to be collected</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pickupDate">Collection Date</label>
+                            <input type="date" id="pickupDate" required min="">
+                            <small>Choose your preferred collection date</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pickupTime">Collection Time</label>
+                            <select id="pickupTime" required>
+                                <option value="">Select time slot</option>
+                                <option value="08:00">8:00 AM</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                            </select>
+                            <small>Select your preferred time for collection</small>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="pickupAddress">Pickup Address</label>
+                            <textarea id="pickupAddress" rows="3" placeholder="Enter your full address including street, city, state and zip code" required></textarea>
+                            <small>Provide the complete address where waste will be collected</small>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="specialInstructions">Special Instructions (Optional)</label>
+                            <textarea id="specialInstructions" rows="3" placeholder="Any special instructions for the collection team"></textarea>
+                            <small>Add any notes or instructions for the collection team</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label>Price Summary</label>
+                        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <span>Service Fee:</span>
+                                <span id="serviceFee">₹0.00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                                <span>Additional Charges:</span>
+                                <span id="additionalFee">₹0.00</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; border-top: 1px solid #ddd; padding-top: 10px;">
+                                <span>Total:</span>
+                                <span id="totalFee">₹0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full" style="margin-top: 20px;">Continue to Payment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your booking has been processed successfully.</p>
+            <button class="btn btn-primary modal-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- To Top Button -->
+    <button id="toTopBtn" class="to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Set minimum date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('pickupDate').min = today;
+            
+            // Logout functionality
+            function handleLogout() {
+                // In a real application, you would handle the logout logic with your server
+                window.location.href = 'index.html';
+            }
+            
+            document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+            document.getElementById('logoutBtnMobile').addEventListener('click', handleLogout);
+            
+            // Price calculation
+            const serviceType = document.getElementById('serviceType');
+            const wasteAmount = document.getElementById('wasteAmount');
+            const serviceFee = document.getElementById('serviceFee');
+            const additionalFee = document.getElementById('additionalFee');
+            const totalFee = document.getElementById('totalFee');
+            
+            function updatePrice() {
+                let baseFee = 0;
+                let additionalCharge = 0;
+                
+                // Set base fee based on service type
+                switch(serviceType.value) {
+                    case 'regular':
+                        baseFee = 20;
+                        break;
+                    case 'recycling':
+                        baseFee = 40;
+                        break;
+                    case 'special':
+                        baseFee = 50;
+                        break;
+                    case 'party':
+                        baseFee = 70;
+                        break;
+                    case 'shop':
+                        baseFee = 400;
+                        break;
+                }
+                
+                // Add additional fee based on waste amount
+                if (wasteAmount.value === 'medium' && serviceType.value !== 'shop') {
+                    additionalCharge = 10;
+                } else if (wasteAmount.value === 'large' && serviceType.value !== 'shop') {
+                    additionalCharge = 25;
+                }
+                
+                serviceFee.textContent = `₹${baseFee.toFixed(2)}`;
+                additionalFee.textContent = `₹${additionalCharge.toFixed(2)}`;
+                totalFee.textContent = `₹${(baseFee + additionalCharge).toFixed(2)}`;
+            }
+            
+            serviceType.addEventListener('change', updatePrice);
+            wasteAmount.addEventListener('change', updatePrice);
+            
+            // Form submission
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    serviceType: serviceType.value,
+                    wasteAmount: wasteAmount.value,
+                    pickupDate: document.getElementById('pickupDate').value,
+                    pickupTime: document.getElementById('pickupTime').value,
+                    pickupAddress: document.getElementById('pickupAddress').value,
+                    specialInstructions: document.getElementById('specialInstructions').value,
+                    totalFee: totalFee.textContent
+                };
+                
+                // In a real application, you would send this data to your server
+                console.log('Booking form submitted:', formData);
+                
+                // For demo purposes, redirect to payment page
+                window.location.href = 'payment.html';
+            });
+        });
+    </script>
+</body>
+</html>
