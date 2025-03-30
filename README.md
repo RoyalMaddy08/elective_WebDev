@@ -33,7 +33,5 @@ This project was developed as part of an elective course. It provides a **"basic
 - **Course:** **Web Development**  
 - **Instructor:** **Mannat Doultani**  
 
----
-
-### **⭐ If you liked the project, consider giving it a star on GitHub!**  
+ 
 
