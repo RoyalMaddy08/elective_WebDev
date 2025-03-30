@@ -27,7 +27,7 @@ This project was developed as part of an elective course. It provides a **"basic
 
 ## **📧 Contact (For Academic Purposes)**  
 - **Developed by:**
-- **1). Dhriti Mohan**
+- **1). Dhriti Mohata**
 - **2). Shaunak Karambelkar**
 - **3). Akshay Nambiar**
 - **Course:** **Web Development**  
